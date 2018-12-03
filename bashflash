@@ -1,0 +1,20 @@
+#!/bin/bash
+GREEN='\033[1;32m'
+NC='\033[0m' #no color
+if [ "$1" ]; then
+   FILES=$1
+else
+   FILES=`find $PWD -name "*.q"`
+fi
+
+echo  "bashflash (C) Tom White"
+echo "Licensed under the MIT License"
+echo "Usage: bashflash [reviewfile]"
+echo "Default: uses all .q files in the current directory tree"
+echo "<ctrl>+C to exit."
+while (true); do 
+printf "${GREEN}`cat $FILES | grep -v "^$" | shuf -n 1`${NC}\n"
+read -n 1 -s
+echo "."
+done;
+
