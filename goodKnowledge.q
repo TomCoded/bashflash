@@ -30,4 +30,6 @@ THETA, O, and Omega. g(x)=THETA(f(x)) means g(x) is bound on bottom by c1f(x) an
 Python Multithreading? Sync? Spawn? Join?
 Multithreading as DAG: vertices are "threads"--maximal sequences of instructions, not including parallel control (no spawn, sync, return). EDGES are parallell control: spawn, Return, Continuation.
 Parallell metrics: T_p = running time on p proccessors. T_1 = work = serial running time. T_infinite = "Critical path length" = longest path in DAG. T1/T_p=Speedup on P Processors.
-Superlinear speedup in parallell execution is not possible except with funky caching.
+Superlinear speedup in parallel execution is not possible except with funky caching.
+immutability (i.e. replacing an entire object instead of mutating it) has several main advantages: it is easy to tell if an object has been changed, and it can be used to ensure consistent state and/or for history/auditing/time-travel.
+
